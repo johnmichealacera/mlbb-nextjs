@@ -32,8 +32,6 @@ async function fetchFullPageHTML() {
         return heroesArray;
     }, element);
     
-    console.log(heroes);
-    
     //   const rowData = await page.evaluate((element: any) => {
     //     const rows = element.querySelectorAll('tr');
     //     const rowDataArray: any = [];
@@ -46,8 +44,6 @@ async function fetchFullPageHTML() {
     
     //     return rowDataArray;
     // }, element);
-    
-    // console.log('rowData', rowData);
     return heroes;
   } else {
       console.log('Element not found');

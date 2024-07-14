@@ -5,7 +5,7 @@ import { fetchAllHeroes, fetchCounterHeroes } from "../lib/data";
 
 export default function Page() {
   const [allHeroes, setAllHeroes] = useState([]);
-  const [selectedHeroes, setSelectedHeroes] = useState([]);
+  const [selectedHeroes, setSelectedHeroes]: any = useState([]);
   const [counterHeroes, setCounterHeroes] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function Page() {
   }, []);
 
   const handleHeroSelect = (event: any) => {
-    const selectedHero = event.target.value.toLowerCase();
+    const selectedHero: any = event.target.value.toLowerCase();
     console.log('I was clicked');
     // Check if selectedHero is not already in selectedHeroes
     if (!selectedHeroes.includes(selectedHero)) {
@@ -50,7 +50,7 @@ export default function Page() {
               required
             >
               <option value="">Select hero...</option>
-              {allHeroes.map((hero, index) => (
+              {allHeroes.map((hero: any, index) => (
                 <option key={index} value={hero.name}>{hero.name}</option>
               ))}
             </select>

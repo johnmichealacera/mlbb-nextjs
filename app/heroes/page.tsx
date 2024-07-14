@@ -18,7 +18,6 @@ export default async function Page({ searchParams }: { searchParams: { query: st
                 <Image
                   alt={hero?.name}
                   src={hero.img_url ? hero?.img_url : 'https://via.placeholder.com/500x300'}
-                  objectFit="cover"
                   className="rounded-lg"
                   height={400}
                   width={300}

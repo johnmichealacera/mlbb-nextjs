@@ -18,6 +18,7 @@ const links = [
     icon: CogIcon,
   },
   { name: 'Statistics', href: '/statistics', icon: UserGroupIcon },
+  { name: 'Hero Counters', href: '/counters', icon: UserGroupIcon },
 ];
 
 export default function NavLinks() {

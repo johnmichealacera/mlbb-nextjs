@@ -13,7 +13,7 @@ export default async function Page({ searchParams }: { searchParams: { query: st
     <div className="w-full">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 lg:gap-8">
         {heroes.map((hero) => (
-              <div key={hero.id} className="rounded-lg overflow-hidden">
+            <div key={hero.id} className="rounded-lg overflow-hidden">
               <a href="#" className="block relative">
                 <Image
                   alt={hero?.name}
@@ -21,9 +21,13 @@ export default async function Page({ searchParams }: { searchParams: { query: st
                   className="rounded-lg"
                   height={400}
                   width={300}
+
                 />
-                <div className="absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 transition-opacity opacity-0 hover:opacity-100">
-                  <p className="text-white font-semibold">{hero?.name}</p>
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 transition-opacity opacity-0 hover:opacity-100">
+                  <p className="text-white font-semibold text-xs">Name: {hero?.name}</p>
+                  <p className="text-white font-semibold text-xs">Role: {hero?.role}</p>
+                  <p className="text-white font-semibold text-xs">Offense: {hero?.offense}</p>
+                  <p className="text-white font-semibold text-xs">Defense: {hero?.defense}</p>
                 </div>
               </a>
             </div>

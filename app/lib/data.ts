@@ -14,7 +14,10 @@ export async function fetchHeroes(
       SELECT
       id,
       img_url,
-      name
+      name,
+      role,
+      offense,
+      defense
       FROM heroes
       WHERE
         heroes.name ILIKE ${`%${query}%`} OR
